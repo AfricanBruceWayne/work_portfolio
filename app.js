@@ -32,6 +32,7 @@ const app = express();
 app.set('port', process.env.PORT || 8080);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+app.use(compression());
 app.use(sass({
     src: path.join(__dirname, 'public'),
     dest: path.join(__dirname, 'public')
@@ -39,6 +40,12 @@ app.use(sass({
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(session({
+    resave: true,
+    saveUninitialized: true,
+    secret: 'j@yZ_Sh@wn_C@rter',
+    cookie: { maxAge: 1209600000 }
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
@@ -77,6 +84,7 @@ app.use('/webfonts', express.static(path.join(__dirname, 'node_modules/@fortawes
  * Primary app routes.
  */
 app.get('/', homeController.index);
+
 
 /**
  * Start Express server.
