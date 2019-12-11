@@ -1,0 +1,33 @@
+{
+  "name": "work_portfolio_2020",
+  "version": "1.0.0",
+  "description": "Portfolio site with Node.js + Pug ",
+  "engines": {
+    "node": "10.x"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node test.js"
+  },
+  "author": "Thasi Mhlongo",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "chalk": "^3.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.0",
+    "gh-pages": "^2.1.1",
+    "lusca": "^1.6.1",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.2",
+    "node-sass": "^4.13.0",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "request": "^2.88.0",
+    "tape": "^4.11.0"
+  }
+}
